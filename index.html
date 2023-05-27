@@ -29,7 +29,7 @@
     <title>Anshul Rawat</title>
   </head>
   <body>
-    <div class="nav-parent">
+    <div class="nav-parent navbar-default">
       <div class="nav-wrapper">
         <div class="branding">
           <a href="#">Anshul</a>
@@ -61,15 +61,20 @@
       <div class="home-container">
         <div class="home-section">
           <h1 data-aos="fade-right">
-            Hello, My name is Anshul Rawat Designing beautiful Websites.
+            <span class="greetings"> Hello 👋</span>
+            <span class="name">I'm Anshul Rawat</span>
+            Designing Beautiful Websites.
           </h1>
-          <a data-aos="fade-right" class="button" href="#about-section"
+          <a
+            data-aos="fade-right"
+            class="button hover-button"
+            href="#about-section"
             >Learn More</a
           >
         </div>
 
         <div data-aos="fade-left" class="img-container" data-aos="fade-up ">
-          <img src="images/male_avatar_g98d.svg" alt="image" />
+          <img src="images/male_avatar.svg" alt="image" />
         </div>
       </div>
     </div>
@@ -161,13 +166,43 @@
     </div>
 
     <!-- Skills Section-->
-    <div class="skills-section">
-      <h1 class="section-heading">Skills</h1>
-    </div>
+    <div class="skill-container" data-aos="fade-up">
+      <div class="skills-section">
+        <h1 class="section-heading">Skills</h1>
+      </div>
 
-    <!-- Footer need to complete -->
-    <footer class="footer-section">
-      <!-- <img class="footer-img" src="images/footerPattern.svg" alt="" /> -->
+      <div class="skill-cloud">
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">React</span>
+        <span class="skill">Node.js</span>
+        <span class="skill">Express</span>
+        <span class="skill">MongoDB</span>
+        <span class="skill">SQL</span>
+        <span class="skill">Git</span>
+        <span class="skill">UI/UX Design</span>
+      </div>
+      <div class="shape-container" data-aos="fade-left">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+      </div>
+    </div>
+    <!-- Footer  -->
+    <footer class="footer">
+      <div class="social-media">
+        <a href="#" class="social-link facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="social-link twitter">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="#" class="social-link instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <p>&copy; 2023 Your Website. All rights reserved.</p>
     </footer>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
