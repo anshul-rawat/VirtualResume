@@ -65,11 +65,12 @@ window.addEventListener('scroll', function() {
   const navbar = document.querySelector('.nav-wrapper');
   const section1 = document.querySelector('.project-section');
   const section2 = document.querySelector('.about-section');
-  const section3 = document.querySelector('.footer-section');
+  const section3 = document.querySelector('.footer');
 
   const section1Offset = section1.offsetTop;
   const section2Offset = section2.offsetTop;
   const section3Offset = section3.offsetTop;
+
 
   const scrollPosition = window.pageYOffset + window.innerHeight / 8;
   if (scrollPosition > section1Offset && scrollPosition < section2Offset) {
@@ -80,6 +81,7 @@ window.addEventListener('scroll', function() {
     navbar.style.backgroundColor = '#fdf6f8';
   }
 });
+
 
 // Gmail Redirect Logic
 
@@ -96,18 +98,40 @@ function redirectToGmail() {
 }
 
 
+//Download resume
+const downloadBtn = document.getElementById('downloadBtn');
+const resumeUrl = 'https://drive.google.com/file/d/1c9MHXoDAsH_WqKPh-f6xdOKuCyUPTaHY/view?usp=sharing';
+
+downloadBtn.addEventListener('click', () => {
+  window.location.href = resumeUrl;
+});
+
+
+
 // Skills Slider 
 
 // Optional: Add functionality to the skill cloud
 
-const skills = document.querySelectorAll('.skill');
+// const skills = document.querySelectorAll('.skill');
 
-skills.forEach(skill => {
-  skill.addEventListener('click', () => {
-    // Perform an action when a skill is clicked
-    console.log(`Clicked on skill: ${skill.textContent}`);
-  });
-});
+// skills.forEach(skill => {
+//   skill.addEventListener('click', () => {
+//     // Perform an action when a skill is clicked
+//     console.log(`Clicked on skill: ${skill.textContent}`);
+//   });
+// });
+
+// Footer Section
+// window.addEventListener('scroll', function() {
+//   var footer = document.querySelector('.footer');
+//   var scrollPosition = window.scrollY;
+
+//   if (scrollPosition > 0) {
+//     footer.style.backgroundColor = "#fff";
+//   } else {
+//     footer.style.backgroundColor = "#fdf6f8";
+//   }
+// });
 
 
 

@@ -37,9 +37,9 @@
 
         <ul>
           <li><a href="#home">Home</a></li>
-          <li><a href="#about-section">About</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about-section">About</a></li>
         </ul>
 
         <a class="burger" onclick="toggleButton()">
@@ -65,12 +65,14 @@
             <span class="name">I'm Anshul Rawat</span>
             Designing Beautiful Websites.
           </h1>
-          <a
+          <button
             data-aos="fade-right"
             class="button hover-button"
-            href="#about-section"
-            >Learn More</a
+            id="openModalBtn"
+            onclick="redirectToGmail()"
           >
+            Message me
+          </button>
         </div>
 
         <div data-aos="fade-left" class="img-container" data-aos="fade-up ">
@@ -151,22 +153,20 @@
           alt="img"
         />
       </div>
-      <div class="about-description">
-        <h1 data-aos="fade-up">About me</h1>
-        <p data-aos="fade-up">
+      <div data-aos="fade-left" class="about-description">
+        <h1>About me</h1>
+        <p>
           A computer science student has passion about web development. Always
           to try to implement beautiful website ideas into reality with the help
           of HTML, CSS & JavaScript. Can't forget about React.js 😇
         </p>
 
-        <button class="hover-button btn" onclick="redirectToGmail()">
-          Message me
-        </button>
+        <button class="hover-button btn" id="downloadBtn">Learn more</button>
       </div>
     </div>
 
     <!-- Skills Section-->
-    <div class="skill-container" data-aos="fade-up">
+    <div id="skills" class="skill-container" data-aos="fade-right">
       <div class="skills-section">
         <h1 class="section-heading">Skills</h1>
       </div>

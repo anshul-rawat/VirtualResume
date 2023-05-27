@@ -408,7 +408,7 @@ ul {
 
 /* footer section */
 
-/* .footer {
+.footer {
   margin-top: 2rem;
   background-color: var(--bg-color);
   padding: 20px;
@@ -443,34 +443,6 @@ ul {
 
 .instagram:hover {
   color: #c13584;
-} */
-
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  min-height: 100%;
-  position: relative;
-}
-
-.content {
-  padding-bottom: 60px; /* Adjust this value to accommodate the footer height */
-}
-
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 60px; /* Adjust this value according to your footer height */
-  background-color: #f8f8f8;
-  text-align: center;
-  font-size: 14px;
-  color: #777;
 }
 
 /* Shapes in skill section */
@@ -506,3 +478,5 @@ body {
     transform: translateY(0);
   }
 }
+
+/* show resume on button click  */
