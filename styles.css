@@ -6,9 +6,12 @@
 
 :root {
   --main-color: #fff;
-  --secondary-color: #595555;
+  --font-color: #595555;
   --bg-color: #fdf6f8;
-  --bg2-color: #f4a8be;
+  --shape-color: #f4a8be;
+  --hover-color: #f4a8be;
+  --bg-button: #595559;
+  --bg-dark: #121212;
 }
 
 html {
@@ -22,7 +25,7 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--secondary-color);
+  color: var(--font-color);
 }
 
 ul {
@@ -48,7 +51,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .nav-wrapper ul li a {
@@ -56,14 +59,14 @@ ul {
 }
 
 .nav-wrapper ul li a:hover {
-  color: var(--secondary-color);
+  color: var(--font-color);
 }
 .nav-wrapper ul li a::after {
   content: "";
   display: flex;
   width: 0%;
   height: 2px;
-  background: var(--secondary-color);
+  background: var(--font-color);
   transition: all 0.3s ease;
 }
 
@@ -92,7 +95,7 @@ ul {
 .burger .bar {
   width: 100%;
   height: 2px;
-  background: var(--secondary-color);
+  background: var(--font-color);
   transition: all 0.3s ease;
 }
 
@@ -143,7 +146,7 @@ ul {
 
 .home-section h1 {
   font-size: clamp(3rem, 4vw, 6rem);
-  color: var(--secondary-color);
+  color: var(--font-color);
   font-weight: 500;
   text-align: center;
   margin-top: 30px;
@@ -179,7 +182,7 @@ ul {
   -webkit-text-fill-color: transparent;
 }
 .home-section a {
-  background: var(--secondary-color);
+  background: var(--font-color);
   color: var(--main-color);
   padding: 10px 1rem;
   border-radius: 50px;
@@ -235,7 +238,7 @@ ul {
   letter-spacing: 0.23ch;
   text-align: center;
   padding: 6rem;
-  color: var(--secondary-color);
+  color: var(--font-color);
 }
 
 .card-container {
@@ -281,7 +284,7 @@ ul {
 
 .about-description h1,
 .about-description p {
-  color: var(--secondary-color);
+  color: var(--font-color);
 }
 
 .about-description p {
@@ -348,7 +351,7 @@ ul {
   display: inline-block;
   padding: 12px 20px;
   font-size: 16px;
-  background-color: var(--secondary-color);
+  background-color: var(--bg-button);
   color: var(--main-color);
   border: none;
   cursor: pointer;
@@ -372,7 +375,7 @@ ul {
 }
 
 .hover-button:hover {
-  background-color: var(--bg2-color);
+  background-color: var(--hover-color);
   color: var(--main-color);
 }
 
@@ -414,7 +417,7 @@ ul {
   padding: 20px;
   text-align: center;
   font-size: 0.8rem;
-  color: var(--secondary-color);
+  color: var(--font-color);
 }
 
 .social-media {
@@ -456,7 +459,7 @@ ul {
 .shape {
   width: 40px;
   height: 40px;
-  background-color: var(--bg2-color);
+  background-color: var(--shape-color);
   border-radius: 50%;
   margin: 10px;
   transition: transform 0.3s ease;
@@ -479,4 +482,48 @@ ul {
   }
 }
 
-/* show resume on button click  */
+/* Slider button for dark and light mode  */
+[data-theme="dark"] {
+  --font-color: #787878;
+  --bg-color: #323232;
+  --hover-color: #acb1ed;
+  --shape-color: #acb1ed;
+}
+
+.theme-switch input[type="checkbox"] {
+  display: none;
+}
+
+.slider {
+  width: 40px;
+  height: 20px;
+  background-color: #d3d1d1;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.slider.round {
+  border-radius: 20px;
+}
+
+.slider.round:before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+
+input:checked + .slider {
+  background-color: #d3d1d1;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
