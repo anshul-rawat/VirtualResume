@@ -37,13 +37,15 @@ ul {
   position: fixed;
   top: 0;
   z-index: 3;
+  backdrop-filter: blur(10px);
 }
 
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 4rem 1rem 4rem;
+  margin: 0 0.5% 1rem 0.5%;
+  padding: 1rem;
   background: var(--bg-color);
 }
 
@@ -89,7 +91,11 @@ ul {
 }
 
 .burger.active .bar:first-child {
-  transform: rotate(-45deg);
+  transform: rotate(45deg) translate(2px, 2px);
+}
+
+.burger.active .bar:last-child {
+  transform: rotate(-45deg) translate(2px, -2px);
 }
 
 .burger .bar {
@@ -97,6 +103,7 @@ ul {
   height: 2px;
   background: var(--font-color);
   transition: all 0.3s ease;
+  transform-origin: 1px;
 }
 
 .burger-links {
@@ -243,7 +250,7 @@ ul {
 
 .card-container {
   display: flex;
-  gap: 3rem;
+  gap: 1rem;
   justify-content: space-around;
   margin-bottom: 100px;
 }
@@ -309,7 +316,9 @@ ul {
   }
 
   .nav-wrapper {
-    padding: 1rem;
+    width: 100%;
+    padding-top: 1rem;
+    padding-left: 0.5rem;
   }
 
   .nav-wrapper ul {
@@ -323,6 +332,7 @@ ul {
   .burger-links {
     display: flex;
     flex-direction: column;
+    touch-action: pan-y;
   }
 
   .about-section {

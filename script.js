@@ -1,15 +1,13 @@
 
 // burgerlinks
-const burgerLinks = document.querySelector('.burger-links');
-const burger = document.querySelector('.burger');
-const body = document.querySelector('body');
+function toggleButton() {
+  const burger = document.querySelector('.burger');
+  const burgerLinks = document.querySelector('.burger-links');
 
-toggleButton = () =>
-{
-  burgerLinks.classList.toggle('active');
   burger.classList.toggle('active');
-  body.classList.toggle('active');
+  burgerLinks.classList.toggle('active');
 }
+
 
 
 // const container = document.querySelector('.burger');
@@ -91,7 +89,7 @@ function handleThemeChange() {
 
 // Function to set the initial theme based on the stored preference or browser's default preference
 function setInitialTheme() {
-  const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
   const slider = document.getElementById('checkbox');
   const storedTheme = localStorage.getItem('theme');
   const initialTheme = storedTheme || (prefersDarkMode ? 'dark' : 'light');
@@ -202,3 +200,33 @@ toggleSwitch.addEventListener('change', switchTheme, false);
 
 
 
+// Hamburger Menu Swipe Up 
+
+var initialTouchPosition = null;
+
+function handleTouchStart(event) {
+  initialTouchPosition = event.touches[0].clientY;
+}
+
+function handleTouchMove(event) {
+  if (initialTouchPosition === null) {
+    return;
+  }
+
+  var currentTouchPosition = event.touches[0].clientY;
+  var diff = currentTouchPosition - initialTouchPosition;
+
+  if (diff > 0) {
+    // Swiped down, do nothing
+    return;
+  }
+
+  if (diff < -50) {
+    // Swiped up, show the hamburger menu
+    toggleButton();
+    initialTouchPosition = null;
+  }
+}
+
+document.addEventListener('touchstart', handleTouchStart, false);
+document.addEventListener('touchmove', handleTouchMove, false);
